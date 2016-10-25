@@ -78,13 +78,13 @@ class oxcmp_categories extends oxView
         }
 
         $sActCat = $this->_getActCat();
-
+/*
         if ($myConfig->getConfigParam('bl_perfLoadManufacturerTree')) {
             // building Manufacturer tree
             $sActManufacturer = oxRegistry::getConfig()->getRequestParameter('mnid');
             $this->_loadManufacturerTree($sActManufacturer);
         }
-
+*/
         // building category tree for all purposes (nav, search and simple category trees)
         $this->_loadCategoryTree($sActCat);
     }

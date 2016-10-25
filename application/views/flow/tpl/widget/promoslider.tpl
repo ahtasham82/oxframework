@@ -10,7 +10,6 @@
             <ul class="slides">
                 [{block name="dd_widget_promoslider_list"}]
                     [{foreach from=$oBanners key="iPicNr" item="oBanner" name="promoslider"}]
-                        [{assign var="oArticle" value=$oBanner->getBannerArticle()}]
                         [{assign var="sBannerPictureUrl" value=$oBanner->getBannerPictureUrl()}]
                         [{if $sBannerPictureUrl}]
                             <li class="item">
@@ -23,17 +22,6 @@
 
                                 [{if $sBannerLink}]
                                     </a>
-                                [{/if}]
-                                [{if $oViewConf->getViewThemeParam('blSliderShowImageCaption') && $oArticle}]
-                                    <p class="flex-caption">
-                                        [{if $sBannerLink}]
-                                            <a href="[{$sBannerLink}]" title="[{$oBanner->oxactions__oxtitle->value}]">
-                                        [{/if}]
-                                        <span class="title">[{$oArticle->oxarticles__oxtitle->value}]</span>[{if $oArticle->oxarticles__oxshortdesc->value|@trim}]<br/><span class="shortdesc">[{$oArticle->oxarticles__oxshortdesc->value|@trim}]</span>[{/if}]
-                                        [{if $sBannerLink}]
-                                            </a>
-                                        [{/if}]
-                                    </p>
                                 [{/if}]
                             </li>
                         [{/if}]
